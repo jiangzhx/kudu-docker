@@ -1,4 +1,4 @@
-FROM "centos:7"
+FROM centos:7
 
 ARG KUDU_VERSION=1.5.0
 ARG PARALLEL=8
