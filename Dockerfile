@@ -1,7 +1,7 @@
-FROM "centos:7"
+FROM centos:7
 
 ARG KUDU_VERSION=1.5.0
-ARG PARALLEL=8
+ARG PARALLEL=4
 
 ENV KUDU=apache-kudu-${KUDU_VERSION}
 ENV KUDU_URL="http://www.apache.org/closer.cgi?filename=kudu/${KUDU_VERSION}/${KUDU}.tar.gz&action=download"
