@@ -1,6 +1,6 @@
 FROM centos:7
 
-ARG KUDU_VERSION=1.5.0
+ARG KUDU_VERSION=1.6.0
 ARG PARALLEL=4
 
 ENV KUDU=apache-kudu-${KUDU_VERSION}
@@ -10,7 +10,8 @@ ADD . /repo
 
 RUN yum install -y autoconf automake cyrus-sasl-devel cyrus-sasl-gssapi \
   cyrus-sasl-plain gcc gcc-c++ gdb git krb5-server krb5-workstation libtool \
-  make openssl-devel patch pkgconfig redhat-lsb-core rsync unzip vim-common which
+  make openssl-devel patch pkgconfig redhat-lsb-core rsync unzip vim-common \
+  which flex java-1.8.0-openjdk-devel
 
 ADD $KUDU_URL /tmp/${KUDU}.tar.gz
 
