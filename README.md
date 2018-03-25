@@ -1,5 +1,5 @@
 # Kudu Docker
-Docker image for [Apache Kudu](https://github.com/apache/kudu)
+Development docker image for [Apache Kudu](https://github.com/apache/kudu) build from sources
 
 Image can be found on [DockerHub](https://hub.docker.com/r/usuresearch/apache-kudu/)
 
