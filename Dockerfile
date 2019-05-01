@@ -1,6 +1,6 @@
 FROM centos:7
 
-ARG KUDU_VERSION=1.8.0
+ARG KUDU_VERSION=1.9.0
 ARG PARALLEL=4
 ARG APACHE_MIRROR="http://mirror.netcologne.de/apache.org"
 
