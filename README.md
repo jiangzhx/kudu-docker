@@ -16,5 +16,5 @@ docker run -d --rm --name apache-kudu -p 7051:7051 -p 7050:7050 -p 8051:8051 -p 
 
 ```
 docker build . -t mweindel/apache-kudu
-docker tag mweindel/apache-kudu mweindel/apache-kudu:1.12.0
+docker tag mweindel/apache-kudu mweindel/apache-kudu:1.15.0
 ```

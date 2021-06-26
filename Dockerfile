@@ -1,13 +1,15 @@
 FROM centos:7
 
-ARG KUDU_VERSION=1.12.0
+ARG KUDU_VERSION=1.15.0
 ARG PARALLEL=4
 ARG APACHE_MIRROR="http://mirror.netcologne.de/apache.org"
 
-RUN yum -y install autoconf automake cyrus-sasl-devel cyrus-sasl-gssapi \
-  cyrus-sasl-plain flex gcc gcc-c++ gdb git java-1.8.0-openjdk-devel \
+RUN yum -y install centos-release-scl
+RUN yum -y install cyrus-sasl-devel cyrus-sasl-gssapi \
+  cyrus-sasl-plain flex git java-1.8.0-openjdk-devel \
   krb5-server krb5-workstation libtool make openssl-devel patch pkgconfig \
-  redhat-lsb-core rsync unzip vim-common which
+  redhat-lsb-core rsync unzip vim-common which \
+  devtoolset-8
 
 ENV KUDU=apache-kudu-${KUDU_VERSION}
 ENV KUDU_URL="${APACHE_MIRROR}/kudu/${KUDU_VERSION}/${KUDU}.tar.gz"
