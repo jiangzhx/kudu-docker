@@ -2,7 +2,8 @@ FROM centos:7
 
 ARG KUDU_VERSION=1.15.0
 ARG PARALLEL=4
-ARG APACHE_MIRROR="http://mirror.netcologne.de/apache.org"
+#ARG APACHE_MIRROR="http://mirror.netcologne.de/apache.org"
+ARG APACHE_MIRROR="https://mirrors.tuna.tsinghua.edu.cn/apache"
 
 RUN yum -y install centos-release-scl
 RUN yum -y install cyrus-sasl-devel cyrus-sasl-gssapi \
